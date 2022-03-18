@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>JLOrtizDiaz</title>
+    <style type="text/css">
+      header {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      body {
+        background-color: #f4f4ef;
+        display: block;
+        font-family: serif;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        color: #20232a;
+      }
+      .topbar {
+        display: flex;
+        background-color: #a01d26;
+        list-style-type: none;
+        font-size: 20px;
+        text-align: center;
+      }
+      .topbar li {
+        display: inline-block;
+        color: #f4f4ef;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+        background-color: #20232a;
+        border-radius: 8px;
+      }
+      .main_list {
+        display: inline-block;
+        list-style-image: none;
+        list-style-type: none;
+      }
+      .main_list li {
+        text-align: justify;
+      }
+      #main_list {
+        padding-left: 50%;
+        padding-right: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      #lang_list {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .intro {
+        display: inline;
+        width: 800px;
+        text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      .imgs {
+        display: flex;
+        max-width: 54px;
+        max-height: 54px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+      }
+      #hideimage {
+        width: 100%;
+        height: 100%;
+      }
+      footer {
+        background-color: #a01d26;
+        color: #f4f4ef;
+        font-size: 10px;
+        text-align: justify;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 48%;
+        padding-right: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      p {
+        text-align: justify;
+      }
+      .buttns {
+        display: flex;
+        max-width: 80px;
+        margin-left: 50%;
+        margin-right: 50%;
+        margin-bottom: 5px;
+      }
+      .buttns button {
+        background-color: #20232a;
+        font-size: 8px;
+        color: #f4f4ef;
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      .sidebar {
+        display: block;
+        height: 100%;
+        width: 100%;
+        color: white;
+        background-color: #20232a;
+        padding-top: 10px;
+        padding-right: 10px;
+      }
+    </style>
+    <script type="text/javascript">
+      let x = document.getElementById("hideimage");
+      function snowing() {
+        document.body.style.background =
+          "url('images/pixelart/snow.gif') #ACBEBE";
+        x.style.display = "run-in";
+      }
+
+      function stop_snowing() {
+        document.body.style.background = "#F4F4EF";
+        x.style.display = "run-in";
+        x.style.animation = "none";
+      }
+    </script>
+  </header>
+  <body>
+    <div class="topbar">
+      <div class="imgs">
+        <img id="smallpeng" src="images/pixelart/Penguinpoints56.png" />
+      </div>
+      <nav>
+        <ul>
+          <span id="Home"
+            ><li><a href="Homepage.html">Home</a></li></span
+          >
+          <span id="Projects"
+            ><li><a href="Projects.html">Projects</a></li></span
+          >
+          <span id="Contact"><li>Contact</li></span>
+          <span id="Blog"><li>Blog</li></span>
+        </ul>
+      </nav>
+    </div>
+    <aside class="sidebar">
+      <ul>
+        <li>Life & Death</li>
+        <li>Pixelart</li>
+        <li>Video Gallery</li>
+        <li>Published Works</li>
+      </ul>
+    </aside>
+    <section>
+      <div class="intro">
+        <img src="Pixelart/snow.gif" id="hideimage" hidden />
+        <h1>Welcome</h1>
+        <p>
+          Welcome! Here you’ll find the achievements, projects and general
+          professional ideas that I have worked on/created. A bit about myself.
+          My name is Jorge Ortiz Diaz, and I’ve lived in Puerto Rico most of my
+          life. Throughout my life, my goal has been to better educate myself
+          and gain expertise in many fields. These fields include:
+        </p>
+        <ul class="main_list" id="skills_list">
+          <li>Digital Art</li>
+          <li>Writing/Editing/Publishing</li>
+          <li>Copywriting and Graphic Design</li>
+          <li>Video Editing</li>
+          <li>Deep Technological Knowledge</li>
+          <li>Data Entry and Database Management</li>
+          <li>Programming Knowledge:</li>
+          <ul class="main_list" id="lang_list">
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>Python</li>
+            <li>Javascript</li>
+          </ul>
+        </ul>
+        <p>
+          I have a Bachelor’s Degree in Advertising from the University of
+          Puerto Rico Carolina campus and some formal education in computer
+          engineering, although most of my other talents have been self-taught.
+          Self-published a full novel, a collection of short stories and a
+          miniseries. Started a webcomic series. Among many other projects I am
+          constantly working on throughout the year.
+        </p>
+        <p>
+          Browse around and contact me if anything catches your eye. Always open
+          to collaborations and commissions.
+        </p>
+      </div>
+    </section>
+    <div class="buttns">
+      <button id="stop_btn" type="button" onclick="stop_snowing()">Stop</button>
+      <button id="sno_btn" type="button" onclick="snowing()">Snow?</button>
+    </div>
+  </body>
+  <footer>Copywright information and shiz</footer>
+</html>
