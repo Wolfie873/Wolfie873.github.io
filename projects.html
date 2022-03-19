@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <header>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>JLOrtizDiaz</title>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <style type="text/css">
+      /*Website Colors:
+      --davys-grey: #494947ff;
+      --eggshell: #f0ebd8ff;
+      --cerulean-frost: #6b9ac4ff;
+      --vermilion: #ca3c25ff;
+      --venetian-red: #c20114ff;*/
+      header {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      body {
+        background-color: #f0ebd8;
+        display: block;
+        font-family: serif;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        color: #20232a;
+      }
+      .topbar {
+        display: flex;
+        background-color: #c20114;
+        list-style-type: none;
+        font-size: 20px;
+        text-align: center;
+      }
+      .topbar li {
+        display: inline-block;
+        color: #f0ebd8;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 10px;
+        background-color: #494947;
+        border-radius: 8px;
+      }
+      .imgs {
+        display: flex;
+        max-width: 54px;
+        max-height: 54px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+      }
+      footer {
+        display: flex;
+        position: relative;
+        background-color: #ca3c25;
+        color: #f0ebd8;
+        font-size: 10px;
+        text-align: justify;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 48%;
+        padding-right: 0;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+      }
+      p {
+        text-align: justify;
+      }
+      .buttns {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      .buttns button {
+        background-color: #494947;
+        font-size: 8px;
+        color: #f0ebd8;
+        margin-left: 2px;
+        margin-right: 2px;
+      }
+      a {
+        color: #f0ebd8;
+        text-decoration: none;
+      }
+      .sidebar {
+        display: block;
+        height: 100%;
+        width: 100%;
+        color: #f0ebd8;
+        background-color: #494947;
+        padding-top: 10px;
+        padding-right: 10px;
+      }
+      #p_elem {
+        width: 480px;
+        height: 270px;
+        position: absolute;
+      }
+    </style>
+  </header>
+  <body>
+    <div class="topbar">
+      <div class="imgs"></div>
+      <nav>
+        <ul>
+          <span id="Home"
+            ><li><a href="index.html">Home</a></li></span
+          >
+          <span id="Projects"
+            ><li><a href="projects.html">Projects</a></li></span
+          >
+          <span id="Contact"><li>Contact</li></span>
+          <span id="Blog"><li>Blog</li></span>
+        </ul>
+      </nav>
+    </div>
+    <aside class="sidebar">
+      <ul>
+        <li>Life & Death</li>
+        <li>Pixelart</li>
+        <li>Video Gallery</li>
+        <li>Published Works</li>
+      </ul>
+    </aside>
+    <div class="buttns">
+      <button id="previous" type="button"><</button>
+      <div id="p_elem">
+        <iframe
+          style="
+            width: 960px;
+            height: 540px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+          "
+          frameborder="0"
+          type="text/html"
+          src="../Wolfie873.github.io/Test Projects/GuessTheNumber.html"
+          width="100%"
+          height="100%"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+      <button id="next" type="button">></button>
+    </div>
+    <script type="text/javascript">
+      $("#next").click(function () {
+        $("#p_elem").html(function () {
+          $.get("info.txt", function (data) {
+            alert(data);
+          });
+        });
+      });
+    </script>
+  </body>
+  <footer>Copywright information and shiz</footer>
+</html>
