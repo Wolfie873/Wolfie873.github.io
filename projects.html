@@ -172,7 +172,7 @@
       $("#next").click(function () {
         $("#p_elem").html(function () {
           $.get("info.txt", function (data) {
-            alert(data);
+            return data;
           });
         });
       });
