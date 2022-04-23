@@ -1,3 +1,11 @@
-p{
-    color: aqua;
+p {
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
