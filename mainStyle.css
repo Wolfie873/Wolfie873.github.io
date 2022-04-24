@@ -15,5 +15,16 @@ h2 {
   background-color: gray;
 }
 .lnd {
-  display: none;
+  position: relative;
+  margin: 0 auto;
+  float: left;
+}
+body {
+  background-color: #f0ebd8ff;
+}
+.accordion-button {
+  background-color: #f0ebd8ff;
+}
+.accordion-collapse {
+  background-color: #f0ebd8ff;
 }
