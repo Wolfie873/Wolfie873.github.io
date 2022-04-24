@@ -9,3 +9,11 @@ h2 {
   margin-bottom: 20px;
   font-family: "Times New Roman", Times, serif;
 }
+#webComic_window {
+  width: 1000px;
+  height: 500px;
+  background-color: gray;
+}
+.lnd {
+  display: none;
+}
