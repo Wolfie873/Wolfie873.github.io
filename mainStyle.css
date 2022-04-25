@@ -15,9 +15,17 @@ h2 {
   background-color: gray;
 }
 .lnd {
-  position: relative;
-  margin: 0 auto;
+  position: fixed;
+  width: 600px;
+  height: 400px;
+  margin: 50px 150px;
   float: left;
+}
+.active {
+  display: block;
+}
+.hidden {
+  display: none;
 }
 body {
   background-color: #f0ebd8ff;
