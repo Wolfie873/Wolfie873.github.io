@@ -12,6 +12,10 @@ h2 {
 body {
   background-color: #f0ebd8ff;
 }
+img {
+  width: 300px;
+  height: 300px;
+}
 .accordion-button {
   background-color: #f0ebd8ff;
 }
@@ -31,11 +35,6 @@ body {
   -moz-box-shadow: 0 0 2px #999;
   box-shadow: 0 0 2px #999;
 }
-.jcarousel img {
-  display: block;
-  max-width: 100%;
-  height: auto !important;
-}
 .jcarousel {
   position: fixed;
   overflow: hidden;
@@ -52,9 +51,19 @@ body {
   float: left;
   width: 300px;
 }
-.active{
+.jcarousel-items-on {
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  display: inline-block;
+  position: fixed;
   display: block;
 }
-.inactive{
+.jcarousel-items-off {
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  display: inline-block;
+  position: fixed;
   display: none;
 }
