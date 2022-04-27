@@ -13,31 +13,6 @@
 
     <script type="text/javascript" src="L&D/jcarousel/dist/jquery.jcarousel.js"></script>
 <script type="text/javascript" src="L&D/jquery/src/jquery.js"></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-    $(".jcarousel").jcarousel({
-      list: ".jcarousel-list",
-      items: ".jcarousel-item",
-      animation: {
-        duration: 800,
-        easing: "linear",
-        complete: function () {},
-      },
-      transitions: true,
-    });
-  });
-
-  $(".jcarousel").jcarousel("scroll", target);
-
-  $(".jcarousel-control-prev").click(function () {
-    $(".jcarousel").jcarousel("scroll", "-=1");
-  });
-
-  $(".jcarousel-control-next").click(function () {
-    $(".jcarousel").jcarousel("scroll", "+=1");
-  });
-
-</script>
 
       <link rel="stylesheet" href="mainStyle.css">
       <!--/*Website Colors:
@@ -121,18 +96,18 @@
                 <a href="#" class="jcarousel-control-prev inactive" data-jcarouselcontrol="true"><</a>
                 <div class="jcarousel" data-jcarousel="true">
                   <ul>
-                    <li><img id="profile" src="./L&D/Images/ProfileDeath.jpg"/></li>
-                    <li><img id="aut" src="./L&D/Images/Autobiography final.png"/></li>
-                    <li><img id="bar" src="./L&D/Images/Bar.png"/></li>
-                    <li><img id="deadg" src="./L&D/Images/Deadguy-strip.png"/></li>
-                    <li><img id="diversity" src="./L&D/Images/diversity.png"/></li>
-                    <li><img id="games" src="./L&D/Images/games.png"/></li>
-                    <li><img id="group" src="./L&D/Images/Group.png"/></li>
-                    <li><img id="life" src="./L&D/Images/Life.png"/></li>
-                    <li><img id="lifecomic" src="./L&D/Images/Lifecomic.gif"/></li>
-                    <li><img id="procras" src="./L&D/Images/Procrastination.png"/></li>
-                    <li><img id="smoke" src="./L&D/Images/Smoking.png"/></li>
-                    <li><img id="winch" src="./L&D/Images/Winchestnuts.png"/></li>
+                    <li class="jcarousel-items active"><img id="profile" src="./L&D/Images/ProfileDeath.jpg"/></li>
+                    <li class="jcarousel-items inactive" ><img id="aut" src="./L&D/Images/Autobiography final.png"/></li>
+                    <li class="jcarousel-items inactive"><img id="bar" src="./L&D/Images/Bar.png"/></li>
+                    <li class="jcarousel-items inactive"><img id="deadg" src="./L&D/Images/Deadguy-strip.png"/></li>
+                    <li class="jcarousel-items inactive"><img id="diversity" src="./L&D/Images/diversity.png"/></li>
+                    <li class="jcarousel-items inactive"><img id="games" src="./L&D/Images/games.png"/></li>
+                    <li class="jcarousel-items inactive"><img id="group" src="./L&D/Images/Group.png"/></li>
+                    <li class="jcarousel-items inactive"><img id="life" src="./L&D/Images/Life.png"/></li>
+                    <li class="jcarousel-items inactive"><img id="lifecomic" src="./L&D/Images/Lifecomic.gif"/></li>
+                    <li class="jcarousel-items inactive"><img id="procras" src="./L&D/Images/Procrastination.png"/></li>
+                    <li class="jcarousel-items inactive"><img id="smoke" src="./L&D/Images/Smoking.png"/></li>
+                    <li class="jcarousel-items inactive"><img id="winch" src="./L&D/Images/Winchestnuts.png"/></li>
                 </ul>
                 </div>
                 <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">></a>

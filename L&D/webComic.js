@@ -1,25 +1,13 @@
 $(document).ready(function () {
-  $(function () {
-    $(".jcarousel").jcarousel({
-      vertical: true,
-      list: ".jcarousel-list",
-      items: ".jcarousel-item",
-      animation: {
-        duration: 800,
-        easing: "linear",
-        complete: function () {},
-      },
-      transitions: true,
-    });
-  });
+  
+  var counter = 0;
+  var imgArray = [$("#profile"), $("#aut"), $("#bar"), $("#deadg"), $("#diversity"), $("#games"), $("#group"), $("#life"), $("#lifecomic"), $("#procras"), $("#smoke"), $("#winch")];
 
-  $(".jcarousel").jcarousel("scroll", target);
-
-  $(".jcarousel-control-prev").click(function () {
-    $(".jcarousel").jcarousel("scroll", "-=1");
-  });
-
-  $(".jcarousel-control-next").click(function () {
-    $(".jcarousel").jcarousel("scroll", "+=1");
-  });
+  $("jcarousel-control-prev").click(function () {
+    counter--;
+    if(counter < 0){
+      $(imgArray[counter]).removeClass()
+    }
+  })
+  
 });
