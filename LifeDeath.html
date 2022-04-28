@@ -2,6 +2,7 @@
 <html lang="en-us">
   <header>
     <title>JLOrtizDiaz</title>
+    
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -19,10 +20,10 @@
     ></script>
     <!--JQuery input call-->
 
-    <script type="text/javascript" src="./L&D/webComic.js"></script>
+    <script src="../Jquery_Practice/jquery-ui-1.13.1/jquery-ui.js"></script>
+    <!--UI elements from JQuery-->
 
-    <script type="text/javascript" src="./L&D/jcarousel/dist/jquery.jcarousel.min.js"></script>
-
+    <script type="text/javascript" src="./jcarousel/dist/jquery.jcarousel.min.js"></script>
 
       <link rel="stylesheet" href="mainStyle.css">
       <!--/*Website Colors:
@@ -33,11 +34,11 @@
       --venetian-red: #c20114ff;-->
   </header>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #494947ff; color: #f0ebd8ff">
           
         <div class="container-fluid">
             
-          <a class="navbar-brand" href="#"><img style="width: 50px; height: 50px" src="./Images/art_for_logo_words.png"/></a>
+          <a class="navbar-brand" href="#"><img style="width: 50px; height: 50px" src="./Images/Penguinpoints112.png"/></a>
             
           <button 
             class="navbar-toggler" 
@@ -58,13 +59,13 @@
               
             <li class="nav-item">
                 
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               
             </li>
               
             <li class="nav-item">
                 
-              <a class="nav-link" href="#">Projects</a>
+              <a class="nav-link" href="LifeDeath.html">Projects</a>
               
             </li>
               
@@ -99,42 +100,96 @@
       
       </nav>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center" id="webComic_container">
-              <div class="jcarousel-wrapper">
-                <a href="#" class="jcarousel-prev" data-jcarouselcontrol="true"><</a>
-                <div class="jcarousel" data-jcarousel="true">
-                  <div >
-                    <img class="jcarousel-item" id="profile" src="./L&D/Images/ProfileDeath.jpg"/>
+      <script type="text/javascript" src="./L&D/webComic.js"></script>
+<div class="container">
 
-                    <img class="jcarousel-item" id="aut" src="./L&D/Images/Autobiography final.png"/>
+  <div class="row">
 
-                    <img class="jcarousel-item" id="bar" src="./L&D/Images/Bar.png"/>
+    <div class="col-md-12">
+    
+      <p style="text-align: center">This will be long text that will describe the whole project.</p>
+    
+    </div>
 
-                   <img class="jcarousel-item" id="deadg" src="./L&D/Images/Deadguy-strip.png"/>
+    <div class="col-lg-12">
 
-                    <img class="jcarousel-item" id="diversity" src="./L&D/Images/diversity.png"/>
+      <div class="wrapper">
 
-                    <img class="jcarousel-item" id="games"src="./L&D/Images/games.png"/>
+        <p class="jcarousel-pagination" data-jcarouselpagination="true">
 
-                    <img class="jcarousel-item" id="group" src="./L&D/Images/Group.png"/>
+            <a href="#2" class="active">2</a>
 
-                    <img class="jcarousel-item" id="life" src="./L&D/Images/Life.png"/>
+            <a href="#3">3</a>
 
-                    <img class="jcarousel-item" id="lifecomic" src="./L&D/Images/Lifecomic.gif"/>
+            <a href="#4">4</a>
 
-                    <img class="jcarousel-item" id="procras" src="./L&D/Images/Procrastination.png"/>
+            <a href="#5">5</a>
 
-                    <img class="jcarousel-item" id="smoke" src="./L&D/Images/Smoking.png"/>
+            <a href="#6">6</a>
 
-                    <img class="jcarousel-item" id="winch" src="./L&D/Images/Winchestnuts.png"/>
+            <a href="#7">7</a>
 
-                </div>
-              </div>
-              <a href="#" class="jcarousel-next" data-jcarouselcontrol="true">></a>
-            </div>
+            <a href="#8">8</a>
+
+            <a href="#9">9</a>
+
+            <a href="#10">10</a>
+
+            <a href="#11">11</a>
+
+            <a href="#12">12</a>
+
+            <a href="#13">13</a>
+
+          </p>
+
+        <div class="jcarousel-wrapper">
+          
+          <a href="#" class="jcarousel-control-prev inactive" data-jcarouselcontrol="true"><</a>
+
+          <div class="jcarousel" data-jcarousel="true">
+
+            <ul style="left: 0px; top: 0px;">
+              
+              <li><img src="./L&D/Images/ProfileDeath.jpg"/></li>
+
+              <li><img src="./L&D/Images/Autobiography final.png"/></li>
+
+              <li><img src="./L&D/Images/Bar.png"/></li>
+
+              <li><img src="./L&D/Images/Deadguy-strip.png"/></li>
+
+              <li><img src="./L&D/Images/diversity.png"/></li>
+
+              <li><img src="./L&D/Images/games.png"/></li>
+
+              <li><img src="./L&D/Images/Group.png"/></li>
+
+              <li><img src="./L&D/Images/Life.png"/></li>
+
+              <li><img src="./L&D/Images/Lifecomic.gif"/></li>
+
+              <li><img src="./L&D/Images/Procrastination.png"/></li>
+
+              <li><img src="./L&D/Images/Smoking.png"/></li>
+
+              <li><img src="./L&D/Images/Winchestnuts.png"/></li>
+
+
+            </ul>
+
+          </div>
+          
+          <a href="#" class="jcarousel-control-next" data-jcarouselcontrol="true">></a>
+
+          </div>
+          
         </div>
+
+        </div>
+
+  </div>
+
     </div>
     
 <!-- Option 1: Bootstrap Bundle with Popper -->

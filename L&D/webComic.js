@@ -1,23 +1,44 @@
-document.querySelector(":root", function () {
-  $(function () {});
-  $(".jcarousel-prev").jcarouselControl({
-    target: "-=1",
-  });
+(function ($) {
+  $(function () {
+    $(".jcarousel").on("jcarousel:create jcarousel:reload", function () {
+      var element = $(this),
+        height = element.innerHeight();
+      element.jcarousel("items").css("height", height + "px");
+    });
 
-  $(".jcarousel-next").jcarouselControl({
-    target: "+=1",
-  });
-});
-var carousel = $(".jcarousel").jcarousel({
-  items: ".jcarousel-item",
-  animation: "slow",
-  transitions: true,
-  wrap: "both",
-  center: true,
-  vertical: true,
-});
+    $(".jcarousel").jcarousel({
+      vertical: true,
+    });
 
-$(".jcarousel-prev").jcarouselControl({
-  target: "-=1",
-  carousel: carousel,
-});
+    $(".jcarousel-control-prev")
+      .on("jcarouselcontrol:active", function () {
+        $(this).removeClass("inactive");
+      })
+      .on("jcarouselcontrol:inactive", function () {
+        $(this).addClass("inactive");
+      })
+      .jcarouselControl({
+        target: "-=1",
+      });
+
+    $(".jcarousel-control-next")
+      .on("jcarouselcontrol:active", function () {
+        $(this).removeClass("inactive");
+      })
+      .on("jcarouselcontrol:inactive", function () {
+        $(this).addClass("inactive");
+      })
+      .jcarouselControl({
+        target: "+=1",
+      });
+
+    $(".jcarousel-pagination")
+      .on("jcarouselpagination:active", "a", function () {
+        $(this).addClass("active");
+      })
+      .on("jcarouselpagination:inactive", "a", function () {
+        $(this).removeClass("active");
+      })
+      .jcarouselPagination();
+  });
+})(jQuery);
