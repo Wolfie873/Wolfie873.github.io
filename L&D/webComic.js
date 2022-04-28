@@ -1,38 +1,23 @@
-$(document).ready(function () {
-  var counter = 0;
-  var imgArray = [
-    $("#profile"),
-    $("#aut"),
-    $("#bar"),
-    $("#deadg"),
-    $("#diversity"),
-    $("#games"),
-    $("#group"),
-    $("#life"),
-    $("#lifecomic"),
-    $("#procras"),
-    $("#smoke"),
-    $("#winch"),
-  ];
-
-  $(".jcarousel-control-next").click(function () {
-    imgArray[counter].toggle(
-      function () {
-        $(this).addClass("jcarousel-items-on");
-      },
-      function () {
-        $(this).removeClass("jcarousel-items-off");
-      }
-    );
-    counter++;
-
-    imgArray[counter].toggle(
-      function () {
-        $(this).addClass("jcarousel-items-on");
-      },
-      function () {
-        $(this).removeClass("jcarousel-items-off");
-      }
-    );
+document.querySelector(":root", function () {
+  $(function () {});
+  $(".jcarousel-prev").jcarouselControl({
+    target: "-=1",
   });
+
+  $(".jcarousel-next").jcarouselControl({
+    target: "+=1",
+  });
+});
+var carousel = $(".jcarousel").jcarousel({
+  items: ".jcarousel-item",
+  animation: "slow",
+  transitions: true,
+  wrap: "both",
+  center: true,
+  vertical: true,
+});
+
+$(".jcarousel-prev").jcarouselControl({
+  target: "-=1",
+  carousel: carousel,
 });
