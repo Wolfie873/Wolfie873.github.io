@@ -1,5 +1,24 @@
 p {
   color: black;
+  margin: 0;
+  padding: 30px 15px;
+}
+.titles {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #f0ebd8ff;
+  padding: 0;
+  margin: 0;
+  text-decoration: underline;
+}
+.p-collapse {
+  background-color: #f0ebd8ff;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+  border-radius: 30px;
 }
 h2 {
   text-align: center;
@@ -19,6 +38,16 @@ body {
   background-color: #f0ebd8ff;
 }
 .accordion-collapse {
+  background-color: #494947ff;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 100%;
+  height: auto;
+}
+.collapsed {
+  background-color: #f0ebd8ff;
+}
+.accordion {
   background-color: #f0ebd8ff;
 }
 .jcarousel-wrapper {

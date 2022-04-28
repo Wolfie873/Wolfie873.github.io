@@ -11,3 +11,6 @@ $("#sno_btn").click(function () {
     });
   }
 });
+$(".accordion-button").click(function () {
+  $("write").resizable();
+});
