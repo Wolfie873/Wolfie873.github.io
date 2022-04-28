@@ -60,6 +60,33 @@
         background-color: #494947;
         border-radius: 8px;
       }
+      .main_list {
+        display: inline-block;
+        list-style-image: none;
+        list-style-type: none;
+      }
+      .main_list li {
+        text-align: justify;
+      }
+      #main_list {
+        padding-left: 50%;
+        padding-right: 50%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      #lang_list {
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .intro {
+        display: inline;
+        width: 800px;
+        text-align: center;
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
       .imgs {
         display: flex;
         max-width: 54px;
@@ -69,9 +96,11 @@
         margin-right: 0px;
         margin-bottom: 0px;
       }
+      #hideimage {
+        width: 100%;
+        height: 100%;
+      }
       footer {
-        display: flex;
-        position: relative;
         background-color: #ca3c25;
         color: #f0ebd8;
         font-size: 10px;
@@ -89,10 +118,11 @@
         text-align: justify;
       }
       .buttns {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 50%;
+        display: flex;
+        max-width: 80px;
+        margin-left: 50%;
+        margin-right: 50%;
+        margin-bottom: 5px;
       }
       .buttns button {
         background-color: #494947;
@@ -113,11 +143,6 @@
         background-color: #494947;
         padding-top: 10px;
         padding-right: 10px;
-      }
-      #p_elem {
-        width: 480px;
-        height: 270px;
-        position: absolute;
       }
     </style>
   </header>
@@ -145,41 +170,61 @@
         <li>Published Works</li>
       </ul>
     </aside>
-    <div class="buttns">
-      <button id="previous" type="button"><</button>
-      <div>
-        <iframe
-          style="
-            width: 480px;
-            height: 270px;
-            position: relative;
-            left: 0px;
-            top: 0px;
-            overflow: hidden;
-          "
-          frameborder="0"
-          type="text/html"
-          src=""
-          width="100%"
-          height="100%"
-          allowfullscreen
-        >
-        </iframe>
+    <section>
+      <div class="intro">
+        <h1>Welcome</h1>
+        <p>
+          Welcome! Here you’ll find the achievements, projects and general
+          professional ideas that I have worked on/created. A bit about myself.
+          My name is Jorge Ortiz Diaz, and I’ve lived in Puerto Rico most of my
+          life. Throughout my life, my goal has been to better educate myself
+          and gain expertise in many fields. These fields include:
+        </p>
+        <ul class="main_list" id="skills_list">
+          <li>Digital Art</li>
+          <li>Writing/Editing/Publishing</li>
+          <li>Copywriting and Graphic Design</li>
+          <li>Video Editing</li>
+          <li>Deep Technological Knowledge</li>
+          <li>Data Entry and Database Management</li>
+          <li>Programming Knowledge:</li>
+          <ul class="main_list" id="lang_list">
+            <li>HTML5</li>
+            <li>CSS</li>
+            <li>Python</li>
+            <li>Javascript</li>
+          </ul>
+        </ul>
+        <p>
+          I have a Bachelor’s Degree in Advertising from the University of
+          Puerto Rico Carolina campus and some formal education in computer
+          engineering, although most of my other talents have been self-taught.
+          Self-published a full novel, a collection of short stories and a
+          miniseries. Started a webcomic series. Among many other projects I am
+          constantly working on throughout the year.
+        </p>
+        <p>
+          Browse around and contact me if anything catches your eye. Always open
+          to collaborations and commissions.
+        </p>
       </div>
-      <button id="next" type="button">></button>
+    </section>
+    <div class="buttns">
+      <button id="sno_btn" type="button">Snow?</button>
     </div>
     <script type="text/javascript">
-      $("#next").click(function () {
-        $("#p_elem").attr("src", function (data) {
-          var webpages = [
-            "../Wolfie873.github.io/Test Projects/DissapearingCircles.html",
-            "../Wolfie873.github.io/Test Projects/GuessTheNumber.html",
-            "../Wolfie873.github.io/Test Projects/TestReaction.html",
-          ];
-          for (var i = 0; i < webpages.length; i++) {
-            return webpages[i];
-          }
-        });
+      $("#sno_btn").click(function () {
+        if ($("body").css("background-image") == "none") {
+          $("body").css({
+            "background-color": "#6b9ac4ff",
+            "background-image": "url('snow.gif')",
+          });
+        } else {
+          $("body").css({
+            "background-color": "#f0ebd8",
+            "background-image": "none",
+          });
+        }
       });
     </script>
   </body>

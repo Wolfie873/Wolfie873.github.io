@@ -1,232 +1,462 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <header>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
     <title>JLOrtizDiaz</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous">
+
     <script
       type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     ></script>
-    <style type="text/css">
-      /*Website Colors:
+    <!--JQuery input call-->
+    <script src="../Jquery_Practice/jquery-ui-1.13.1/jquery-ui.js"></script>
+    <!--UI elements from JQuery-->
+
+      <link rel="stylesheet" href="mainStyle.css">
+      <!--/*Website Colors:
       --davys-grey: #494947ff;
       --eggshell: #f0ebd8ff;
       --cerulean-frost: #6b9ac4ff;
       --vermilion: #ca3c25ff;
-      --venetian-red: #c20114ff;*/
-      header {
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-      }
-      body {
-        background-color: #f0ebd8;
-        display: block;
-        font-family: serif;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-        color: #20232a;
-      }
-      .topbar {
-        display: flex;
-        background-color: #c20114;
-        list-style-type: none;
-        font-size: 20px;
-        text-align: center;
-      }
-      .topbar li {
-        display: inline-block;
-        color: #f0ebd8;
-        margin-bottom: 0px;
-        margin-top: 0px;
-        margin-left: 100px;
-        margin-right: 100px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-right: 10px;
-        padding-left: 10px;
-        background-color: #494947;
-        border-radius: 8px;
-      }
-      .main_list {
-        display: inline-block;
-        list-style-image: none;
-        list-style-type: none;
-      }
-      .main_list li {
-        text-align: justify;
-      }
-      #main_list {
-        padding-left: 50%;
-        padding-right: 50%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-      #lang_list {
-        padding-top: 10px;
-        padding-bottom: 10px;
-      }
-      .intro {
-        display: inline;
-        width: 800px;
-        text-align: center;
-        margin-left: 50px;
-        margin-right: 50px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-      .imgs {
-        display: flex;
-        max-width: 54px;
-        max-height: 54px;
-        margin-top: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-        margin-bottom: 0px;
-      }
-      #hideimage {
-        width: 100%;
-        height: 100%;
-      }
-      footer {
-        background-color: #ca3c25;
-        color: #f0ebd8;
-        font-size: 10px;
-        text-align: justify;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-left: 48%;
-        padding-right: 0;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-      }
-      p {
-        text-align: justify;
-      }
-      .buttns {
-        display: flex;
-        max-width: 80px;
-        margin-left: 50%;
-        margin-right: 50%;
-        margin-bottom: 5px;
-      }
-      .buttns button {
-        background-color: #494947;
-        font-size: 8px;
-        color: #f0ebd8;
-        margin-left: 2px;
-        margin-right: 2px;
-      }
-      a {
-        color: #f0ebd8;
-        text-decoration: none;
-      }
-      .sidebar {
-        display: block;
-        height: 100%;
-        width: 100%;
-        color: #f0ebd8;
-        background-color: #494947;
-        padding-top: 10px;
-        padding-right: 10px;
-      }
-    </style>
+      --venetian-red: #c20114ff;-->
   </header>
   <body>
-    <div class="topbar">
-      <div class="imgs"></div>
-      <nav>
-        <ul>
-          <span id="Home"
-            ><li><a href="index.html">Home</a></li></span
-          >
-          <span id="Projects"
-            ><li><a href="projects.html">Projects</a></li></span
-          >
-          <span id="Contact"><li>Contact</li></span>
-          <span id="Blog"><li>Blog</li></span>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #494947ff; color: #f0ebd8ff">
+          
+        <div class="container-fluid">
+            
+          <a class="navbar-brand" href="#"><img style="width: 50px; height: 50px" src="./Images/Penguinpoints112.png"/></a>
+            
+          <button 
+            class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+              
+            <span class="navbar-toggler-icon"></span>
+            
+          </button>
+            
+          <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+            
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+            <li class="nav-item">
+                
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              
+            </li>
+              
+            <li class="nav-item">
+                
+              <a class="nav-link" href="#">Projects</a>
+              
+            </li>
+              
+            <li class="nav-item dropdown">
+                
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Writing
+                
+                </a>
+                
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  
+                  <li><a class="dropdown-item" href="#">Short Story Anthology</a></li>
+                  
+                  <li><hr class="dropdown-divider"></li>
+                  
+                  <li><a class="dropdown-item" href="#">Blue</a></li>
+                  
+                  <li><hr class="dropdown-divider"></li>
+                  
+                  <li><a class="dropdown-item" href="LifeDeath.html">Life & Death</a></li>
+                
+                </ul>
+              
+              </li>
+            
+            </ul>
+          
+          </div>
+        
+        </div>
+      
       </nav>
-    </div>
-    <aside class="sidebar">
-      <ul>
-        <li>Life & Death</li>
-        <li>Pixelart</li>
-        <li>Video Gallery</li>
-        <li>Published Works</li>
-      </ul>
-    </aside>
-    <section>
-      <div class="intro">
-        <h1>Welcome</h1>
-        <p>
-          Welcome! Here you’ll find the achievements, projects and general
-          professional ideas that I have worked on/created. A bit about myself.
-          My name is Jorge Ortiz Diaz, and I’ve lived in Puerto Rico most of my
-          life. Throughout my life, my goal has been to better educate myself
-          and gain expertise in many fields. These fields include:
-        </p>
-        <ul class="main_list" id="skills_list">
-          <li>Digital Art</li>
-          <li>Writing/Editing/Publishing</li>
-          <li>Copywriting and Graphic Design</li>
-          <li>Video Editing</li>
-          <li>Deep Technological Knowledge</li>
-          <li>Data Entry and Database Management</li>
-          <li>Programming Knowledge:</li>
-          <ul class="main_list" id="lang_list">
-            <li>HTML5</li>
-            <li>CSS</li>
-            <li>Python</li>
-            <li>Javascript</li>
-          </ul>
-        </ul>
-        <p>
-          I have a Bachelor’s Degree in Advertising from the University of
-          Puerto Rico Carolina campus and some formal education in computer
-          engineering, although most of my other talents have been self-taught.
-          Self-published a full novel, a collection of short stories and a
-          miniseries. Started a webcomic series. Among many other projects I am
-          constantly working on throughout the year.
-        </p>
-        <p>
-          Browse around and contact me if anything catches your eye. Always open
-          to collaborations and commissions.
-        </p>
+
+    <div class="container">
+      
+      <div class="row">
+        
+        <div class="col-12"><h2>Welcome</h2></div>
+      
+          <div class="col-12">
+            
+            <p>Welcome! Here you’ll find the achievements, projects and general professional ideas that I have worked on/created. 
+          
+              A bit about myself. My name is Jorge Ortiz Diaz, and I’ve lived in Puerto Rico most of my life. 
+          
+              Throughout my life, my goal has been to better educate myself and gain expertise in many fields. 
+          
+              These fields include:
+            </p>
+          
+        </div>
+            
+        <div class="row">
+          
+          <div class="accordion acordion-open acordion-flushed">
+              
+            <div class="accordion-item">
+                
+              <button 
+              
+              class="accordion-button collapsed" 
+                
+              type="button" 
+                
+              data-bs-toggle="collapse" 
+                
+              data-bs-target="#collapseWEP" 
+                
+              aria-expanded="true" 
+                
+              aria-controls="collapseWEP">
+                
+                Writing/Editing/Publishing
+                
+              </button>
+                
+              <div 
+              
+              id="collapseWEP" 
+                
+              class="accordion-collapse collapse hide" 
+                
+              aria-labelledby="headingOne" >
+                  
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-4">
+                    <p class="titles">Blue</p>
+                    <iframe 
+                    type="text/html" 
+                    sandbox="allow-scripts allow-same-origin allow-popups" 
+                    width="336px" 
+                    height="400px" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    style="max-width:100%; 
+                    margin-top: 10px; 
+                    margin-right: 10px; 
+                    margin-left: 0px; 
+                    margin-bottom: 10px" 
+                    src="https://read.amazon.com/kp/card?asin=B07T3D3YWB&preview=inline&linkCode
+                    =kpe&ref_=cm_sw_r_kb_dp_JBT1QMF2PA1J7ANJHHH3" ></iframe>
+                    <p class="p-collapse">
+                      This was my first ever published work. 
+                      Two years in the oven, 1 year in editing, and about 1 more in formatting, design and marketing.
+                      Hell looked enticing for a while during editing.
+                      Burning the thing was even more tempting when I had it in my hands.
+                      Something about pouring your soul into your work and presenting it to the world was terrifying and amazing at the same time.
+                    </p>
+                  </div>
+                  <div class="col-md-4">
+                    <iframe 
+                    type="text/html" 
+                    sandbox="allow-scripts allow-same-origin allow-popups" 
+                    width="500px" 
+                    height="400px" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    style="max-width:50%;
+                    float: left;
+                    margin-top: 10px; 
+                    margin-bottom: 10px " 
+                    src="https://read.amazon.com/kp/card?asin=B0926DBX88&preview=inline&linkCode=
+                    kpe&ref_=cm_sw_r_kb_dp_NFFKSQ70EPWS5NQVANBP" ></iframe>
+                    <iframe 
+                    type="text/html" 
+                    sandbox="allow-scripts allow-same-origin allow-popups" 
+                    width="500px" 
+                    height="400px" 
+                    frameborder="0" 
+                    allowfullscreen style="max-width:50%; 
+                    float:left;
+                    margin-top: 10px;  
+                    margin-bottom: 10px" 
+                    src="https://read.amazon.com/kp/card?asin=B092FRY84W&preview=inline&linkCode=kpe&ref_
+                    =cm_sw_r_kb_dp_N67QSZ6FEQHE1ZNMV3GP" ></iframe>
+                    <p></p>
+                  </div>
+                  <div class="col-md-4">
+                    <iframe 
+                    type="text/html" 
+                    sandbox="allow-scripts allow-same-origin allow-popups" 
+                    width="336" 
+                    height="400" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    style="max-width:100%; 
+                    margin-top: 10px; 
+                    margin-right: 10px; 
+                    margin-left: 0px; 
+                    margin-bottom: 10px" 
+                    src="https://read.amazon.com/kp/card?asin=B091BGN14G&preview=inline&linkCode=kpe&ref
+                    _=cm_sw_r_kb_dp_WQJBQZK5WCBKZT4JKEQK" ></iframe>
+                  </div>
+                </div>
+              </div>      
+                  
+              </div>
+                
+            </div>
+                
+          <div class="accordion-item">
+                
+            <button 
+            
+            class="accordion-button collapsed" 
+                
+            type="button" 
+                
+            data-bs-toggle="collapse" 
+                
+            data-bs-target="#collapseCG" 
+                
+            aria-expanded="true" 
+                
+            aria-controls="collapseCG">
+                
+            Copywriting and Graphic Design
+                
+            </button>
+                
+            <div 
+            
+            id="collapseCG" 
+                
+            class="accordion-collapse collapse hide" 
+                
+            aria-labelledby="headingTwo" >
+                  
+              <p>I'm going to put copy and descrition here</p>      
+                  
+            </div>
+                
+          </div>
+                
+      
+          <div 
+          
+          class="accordion-item">
+                
+          <button class="accordion-button collapsed" 
+                
+            type="button" 
+                    
+            data-bs-toggle="collapse" 
+                    
+            data-bs-target="#collapseVE" 
+                    
+            aria-expanded="true" 
+                    
+            aria-controls="collapseVE">
+                    
+            Video Editing
+                    
+          </button>
+                      
+          <div 
+      
+          id="collapseVE" 
+                
+          class="accordion-collapse collapse hide" 
+                
+          aria-labelledby="headingThree">
+                  
+            <p class="paragraphs">I'm going to put videos and descrition here</p>      
+                  
+          </div>
+                
+        </div>
+                
+        <div 
+  
+        class="accordion-item">
+                
+        <button 
+
+        class="accordion-button collapsed" 
+                
+        type="button" 
+  
+        data-bs-toggle="collapse" 
+                
+        data-bs-target="#collapseDA" 
+                
+        aria-expanded="true" 
+                
+        aria-controls="collapseDA">
+                
+        Digital Art:
+                
+      </button>
+                
+      <div 
+      
+      id="collapseDA" 
+                
+      class="accordion-collapse collapse hide" 
+                
+      aria-labelledby="headingFour">
+                  
+        <p class="paragraphs">I'm going to put a digital art showcase and descrition here</p>      
+                  
       </div>
-    </section>
-    <div class="buttns">
-      <button id="sno_btn" type="button">Snow?</button>
+                 
     </div>
-    <script type="text/javascript">
-      $("#sno_btn").click(function () {
-        if ($("body").css("background-image") == "none") {
-          $("body").css({
-            "background-color": "#6b9ac4ff",
-            "background-image": "url('snow.gif')",
-          });
-        } else {
-          $("body").css({
-            "background-color": "#f0ebd8",
-            "background-image": "none",
-          });
-        }
-      });
-    </script>
-  </body>
-  <footer>Copywright information and shiz</footer>
+              
+    <div class="accordion-item">
+                
+      <button  
+      class="accordion-button collapsed" 
+                
+      type="button" 
+                
+      data-bs-toggle="collapse" 
+                
+      data-bs-target="#collapsePK"               
+  
+      aria-expanded="true" 
+                
+      aria-controls="collapsePK">
+               
+      Programming Knowledge:
+                
+    </button>
+                
+    <div 
+    
+    id="collapsePK" 
+                
+    class="accordion-collapse collapse hide" 
+                
+    aria-labelledby="headingFive">
+                  
+    <div class="accordion-body">
+                    
+      <ul class="list-group">
+                      
+        <li class="list-group-item">HTML5</li>
+                      
+        <li class="list-group-item">CSS</li>
+                      
+        <li class="list-group-item">Python</li>
+                      
+        <li class="list-group-item">Javascript</li>
+                    
+      </ul>      
+                  
+    </div>
+                
+  </div>
+              
+</div>
+              
+<div class="accordion-item">
+                
+
+  <button 
+
+  class="accordion-button collapsed" 
+                
+  type="button" 
+                
+  data-bs-toggle="collapse" 
+                
+  data-bs-target="#collapseDD" 
+                
+  aria-expanded="true" 
+                
+  aria-controls="collapseDD">
+                
+    Data Entry and Database Management
+                
+  </button>
+                
+
+  <div id="collapseDD" 
+                
+  class="accordion-collapse collapse hide" 
+                
+  aria-labelledby="headingSix">
+                  
+  <p>I'm going to put data and descrition here</p>      
+                  
+</div>
+                
+</div>
+            
+</div>
+
+</div>
+
+<div class="row">
+
+  <div class="col-6">
+              
+    <p>
+            
+      I have a Bachelor’s Degree in Advertising from the University of
+            
+      Puerto Rico Carolina campus and some formal education in computer
+            
+      engineering, although most of my other talents have been self-taught.
+            
+      Self-published a full novel, a collection of short stories and a
+            
+      miniseries. Started a webcomic series. Among many other projects I am
+            
+      constantly working on throughout the year.
+              
+    </p>
+            
+  </div>
+            
+  <div class="col-6">
+              
+    <img src="./Images/bhudah.png"/>
+            
+  </div>
+              
+</div>
+
+      
+<div class="button"><button id="sno_btn" type="button" class="btn fixed btn-outline-dark">Snow?</button></div>
+    
+<!-- Option 1: Bootstrap Bundle with Popper -->
+    
+<script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    
+integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    
+crossorigin="anonymous"></script>
+
+    
+<script src="coding.js" type="text/javascript"></script>
+
+</body>
+
 </html>
