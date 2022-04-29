@@ -1,0 +1,3 @@
+[submodule "jcarousel"]
+	path = include/jcarousel
+	url = https://github.com/jsor/jcarousel.git
