@@ -31,6 +31,9 @@
       --venetian-red: #c20114ff;-->
   </header>
   <body>
+    <?php
+      echo "Hello World!";
+    ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->
 
     <script
