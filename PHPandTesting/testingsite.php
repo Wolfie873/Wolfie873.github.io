@@ -30,12 +30,15 @@
   </header>
   
   <body>
-    
+
   <div class="container">
       
     <div class="row">
         
       <div class="col-md-6">
+
+      <a class="navbar-brand" href="../index.html"><img style="width: 50px; height: 50px" src="../Images/Penguinpoints112.png"/></a>
+
           
           <?php
             echo "<h3>Hello World! </h3>";
