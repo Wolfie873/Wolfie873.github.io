@@ -17,6 +17,7 @@ p {
   margin-top: 10px;
   margin-right: 10px;
   margin-left: 0px;
+
   margin-bottom: 10px;
   border-radius: 30px;
 }
@@ -32,6 +33,7 @@ body {
 .wrapper {
   width: 100%;
   height: auto;
+
   margin: 0 auto;
 }
 .accordion-button {
