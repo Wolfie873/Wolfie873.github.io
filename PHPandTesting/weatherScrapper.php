@@ -1,3 +1,22 @@
+<?php
+
+if ($_GET['city']) {
+    $forecastPage = file_get_contents(
+        'https://www.weather-forecast.com/locations/' .
+            $_GET['city'] .
+            '/forecasts/latest'
+    );
+
+    $pageArray = explode(
+        '<table class="b-forecast__table js-forecast-table">',
+        $forecastPage
+    );
+
+    $secondPageArray = explode('</span></p></td></tr><tr', $pageArray[1]);
+
+    $weather = $secondPageArray[0];
+} ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,54 +40,82 @@
     .container-flex {
         height: 100vh;
         background-image: url("../Images/location.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-position: fixed;
         background-size: cover;
     }
 
-    #infoRow {
-        margin-top: 5vh;
-    }
-
-    #inputRow {
-        margin: 5vh;
+    body {
+        background: none;
     }
 
     #weather {
         color: white;
+        background-color: hsl(328, 100%, 0%, 0.9);
     }
 
     #city {
         color: white;
+        background-color: hsl(328, 100%, 0%, 0.9);
+        margin-bottom: 10px;
+    }
+
+    #cityInput {
+        background-color: hsl(328, 100%, 0%, 0.9);
+        color: white;
+    }
+
+    #inputFields {
+        margin-top: 50px;
+        color: white;
+    }
+
+    #alertWeather {
+        width: 800px;
+        margin: 0 auto;
+        max-height: 200px;
+        font-size: 14px !important;
+        font-family:
+            -apple-system,
+            BlinkMacSystemFont,
+            'Segoe UI',
+            Roboto,
+            Oxygen,
+            Ubuntu,
+            Cantarell,
+            'Open Sans',
+            'Helvetica Neue',
+            sans-serif;
+        overflow: scroll;
     }
     </style>
 </head>
 
 <body>
-    <?php  ?>
-    <div class="container-flex">
+    <div class="container-flex d-flex flex-column justify-content-center">
         <div class="d-flex p2 flex-row justify-content-center">
-            <div class="d-flex flex-column" id="infoRow">
-                <div class="p-2 align-self-center" id="weather">
-                    <h2>What's the Weather like</h2>
-                </div>
-                <div class="p-2 align-self-center" id="city">
-                    <h3>Enter the city</h3>
-                </div>
+            <div class="p-2 align-self-center" id="weather">
+                <h2>What's the Weather like</h2>
             </div>
         </div>
-        <div class="d-flex p2 flex-row justify-content-center">
-            <div class="d-flex flex-row align-items-center" id="inputRow">
-                <div class="p-2" id="inPut">
-                    <label for="cityInput"></label>
-                    <input type="text" name="cityInput" id="cityInput" placeholder="Eg. Toky, San Juan">
-                </div>
+        <form class="d-flex flex-column align-items-center" id="inputFields">
+            <div class="form-group d-flex p-2 flex-column align-items-center">
+                <label for="city" class="d-flex p-2" id="city">Enter the City(no spaces):</label>
+                <input type="text" name="city" id="city" placeholder="Eg. Toky, San-Juan">
             </div>
-        </div>
-        <div class="d-flex p2 flex-row justify-content-center">
-            <div class="d-flex flex-column justify-content-center"><button type="submit" class="btn btn-primary"
-                    id="weatherBtn">Show me
-                    Weather</button></div>
-        </div>
-    </div>
+            <div class="form-group d-flex p-2 flex-row">
+                <button type="submit" class="btn btn-primary" id="weatherBtn">Show me
+                    Weather</button>
+            </div>
+        </form>
+        <div id="alertWeather"><?php if ($weather) {
+            echo '<div class="alert alert-success" role="alert"><strong>Weather Forecast for: <em>' .
+                $_GET['city'] .
+                '</em></strong><br/>' .
+                $weather .
+                '</div>';
+        } ?></div>
     </div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
