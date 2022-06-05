@@ -1,21 +1,66 @@
 <?php
 
 if ($_GET['city']) {
-    $forecastPage = file_get_contents(
+    $city = str_replace(' ', '-', $_GET['city']);
+
+    $file_headers = @get_headers(
         'https://www.weather-forecast.com/locations/' .
-            $_GET['city'] .
+            $city .
             '/forecasts/latest'
     );
+    if (!$file_headers || $file_headers[0] == 'HTTP/1.1 404 Not Found') {
+        $exists = false;
+    } else {
+        $forecastPage = file_get_contents(
+            'https://www.weather-forecast.com/locations/' .
+                $city .
+                '/forecasts/latest'
+        );
 
-    $pageArray = explode(
-        '<table class="b-forecast__table js-forecast-table">',
-        $forecastPage
-    );
+        $pageArray = explode(
+            '<table class="b-forecast__table js-forecast-table">',
+            $forecastPage
+        );
 
-    $secondPageArray = explode('</span></p></td></tr><tr', $pageArray[1]);
+        $titleArray = explode(
+            '<div class="main-title__issued show-for-medium-up">',
+            $forecastPage
+        );
 
-    $weather = $secondPageArray[0];
+        $secondtitleArray = explode('</time>', $titleArray[1]);
+
+        $secondPageArray = explode('</span></p></td></tr><tr', $pageArray[1]);
+
+        $weather = $secondPageArray[0];
+
+        $titles = $secondtitleArray[0];
+    }
 } ?>
+
+<?php
+// Turn off all error reporting
+error_reporting(0);
+
+// Report simple running errors
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
+// Reporting E_NOTICE can be good too (to report uninitialized
+// variables or catch variable name misspellings ...)
+error_reporting(E_ERROR | E_WARNING | E_PARSE | E_NOTICE);
+
+// Report all errors except E_NOTICE
+error_reporting(E_ALL & ~E_NOTICE);
+
+// Report all PHP errors
+error_reporting(E_ALL);
+
+// Report all PHP errors
+error_reporting(-1);
+
+// Same as error_reporting(E_ALL);
+ini_set('error_reporting', E_ALL);
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +116,7 @@ if ($_GET['city']) {
         color: white;
     }
 
-    #alertWeather {
+    .alertWeather {
         width: 800px;
         margin: 0 auto;
         max-height: 200px;
@@ -101,20 +146,25 @@ if ($_GET['city']) {
         </div>
         <form class="d-flex flex-column align-items-center" id="inputFields">
             <div class="form-group d-flex p-2 flex-column align-items-center">
-                <label for="city" class="d-flex p-2" id="city">Enter the City(no spaces):</label>
-                <input type="text" name="city" id="city" placeholder="Eg. Toky, San-Juan">
+                <label for="city" class="d-flex p-2" id="city">Enter the City:</label>
+                <input type="text" name="city" id="city" placeholder="Eg. Toky, San Juan" value=<?php echo $city; ?>>
             </div>
             <div class="form-group d-flex p-2 flex-row">
                 <button type="submit" class="btn btn-primary" id="weatherBtn">Show me
                     Weather</button>
             </div>
         </form>
-        <div id="alertWeather"><?php if ($weather) {
+        <div class="alertWeather"><?php if ($weather) {
             echo '<div class="alert alert-success" role="alert"><strong>Weather Forecast for: <em>' .
-                $_GET['city'] .
+                $titles .
                 '</em></strong><br/>' .
                 $weather .
                 '</div>';
+        } ?></div>
+        <div class="alertWeather"><?php if (!$weather) {
+            echo '<div class="alert alert-danger" role="alert" style="text-align: center;"><strong>Error: ' .
+                $city .
+                ' not found</strong><br/>HTML 404</div>';
         } ?></div>
     </div>
 
