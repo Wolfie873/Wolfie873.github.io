@@ -13,3 +13,15 @@
 *{
     border: 1px, solid, red;
 }
+.spacer{
+    background-color:#495057ff;
+}
+.second_div{
+    background-color: #adb5bdff;
+}
+.container-fluid{
+    height: 100vh;
+}
+#artForlogo{
+    margin:auto;
+}
